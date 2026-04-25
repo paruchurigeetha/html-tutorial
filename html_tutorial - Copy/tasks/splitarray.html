@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>splitting word</title>
+    </head>
+    <body>
+        <div>
+        <form action="">
+            <input type="text" id="ip" placeholder="enter any sentence">
+<input type="button" value="splitsortjoin" onclick="test()">
+        </form>
+</div>
+<div id="op">
+</div>
+        <script>
+            function test(){
+                document.getElementById("op").innerHTML=" ";
+                var str=document.getElementById("ip").value;
+                const wordsList=str.split(" ");
+                words= wordsList.sort();
+                const sortedStr = words.join(" ");
+                document.getElementById("op").innerHTML=sortedStr; 
+
+            const ar={name:"geetha",lang:"Telugu"};
+            console.log(ar["name"]);
+            
+            }
+        </script>
+    </body>
+</html>

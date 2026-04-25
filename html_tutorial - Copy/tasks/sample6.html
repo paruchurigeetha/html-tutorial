@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>Test Page</title>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <input type="text" id="ip" placeholder="Enter 'n' value">
+            <input type="button" value="Generate table" onclick="test()">
+        </form>
+    </div>
+
+    <div id="op"></div>
+
+    <script>
+        function test() {
+        document.getElementById("op").innerHTML=" ";
+            var n=document.getElementById("ip").value;
+            var tstart="<table><thead><th>SNO</th><t/head><tbody>";
+            var tend="</tbody></table>";
+            var rows="";
+            for(let i=1;i<=n;i++){
+                rows+="<tr><td>"+i+"</td></tr>";
+            }
+            var table =tstart+rows+tend;
+            document.getElementById("op").innerHTML=table;
+        }
+    </script>
+</body>
+</html>

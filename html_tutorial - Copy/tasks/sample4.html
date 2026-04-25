@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>Test Page</title>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <input type="text" id="ip">
+            <input type="button" value="Start Now" onclick="test()">
+        </form>
+    </div>
+
+    <div id="op"></div>
+
+    <script>
+        function test() {
+            var B=document.getElementById('user').value;
+               var ans=B*(B-2)/8;
+        document.getElementById('res').innerHTML=ans;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      let arr = ["apple", "mango", "orange", "banana"];
+
+      // Use map to transform each item
+      let newArr = arr.map(function(val) {
+        return " " + val;
+      });
+
+      // Print the new array in console
+      console.log(newArr);
+
+      // If you want to show it on the page:
+      let list = document.createElement("ul");
+      newArr.forEach(function(val) {
+        let li = document.createElement("li");
+        li.textContent = val;
+        list.appendChild(li);
+      });
+      document.body.appendChild(list);
+    </script>
+  </body>
+</html>

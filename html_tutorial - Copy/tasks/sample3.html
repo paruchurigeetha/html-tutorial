@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>Test Page</title>
+</head>
+
+<body>
+    <div>
+        <form action="">
+            <input type="text" id="ip">
+            <input type="button" value="Start Now" onclick="test()">
+        </form>
+    </div>
+
+    <div id="op"></div>
+
+    <script>
+        function test() {
+            var n = document.getElementById("ip").value;
+            var result = "";
+for (var i = 1; i <= n; i++) {
+    for (var j = 0; j < i; j++) {
+        result += "*";
+    }
+    result += "<br>";
+}
+document.getElementById("op").innerHTML = result;
+            document.getElementById("op").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

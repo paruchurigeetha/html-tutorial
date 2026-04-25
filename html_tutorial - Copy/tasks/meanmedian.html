@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Enter numbers</h3>
+<input type="text" id="inputArray" placeholder="enter array elements">
+<button onclick="calculate()">Calculate</button>
+<p id="output"></p>
+<script>
+function calculate() {
+  let input = document.getElementById("inputArray").value;
+  let arr = input.split(" ").map(Number);
+  let sum = arr.reduce((total, num) => total + num, 0);
+  let mean = sum / arr.length;
+  let sorted = [...arr].sort((a, b) => a - b);
+  let n = sorted.length;
+  let median;
+  if (n % 2 === 0) {
+    median = (sorted[n/2 - 1] + sorted[n/2]) / 2;
+  } else {
+    median = sorted[Math.floor(n/2)];
+  }
+  document.getElementById("output").innerHTML =
+    "Mean: " + mean + "<br>Median: " + median;
+}
+</script>
+
+</body>
+</html>

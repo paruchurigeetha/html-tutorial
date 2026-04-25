@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="result"></p>
+
+<script>
+  let arr = [175, 50, 25];
+
+  function subofArray(total, num) {
+    return total - num;
+  }
+
+  function mycampus() {
+    let result = arr.reduceRight(subofArray);
+    document.getElementById("result").innerHTML = result;
+  }
+
+  mycampus();
+</script>
+
+</body>
+</html>

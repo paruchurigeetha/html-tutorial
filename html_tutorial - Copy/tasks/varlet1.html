@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>var vs let</title>
+</head>
+
+<body>
+    <div>
+             <h1>var vs let</h1>
+            <input type="button" value="testnow" onclick="test()">
+        </form>
+    </div>
+
+    <div id="op"></div>
+
+    <script>
+        function test() {
+         console.log(a);//hosting is not aloowed with 'let' but is ok with 'var'
+         let a=30;
+         /*console.log(a);
+         {
+            let a=20;
+            console.log(a);
+            var a=50;//RE-Declaration is allowed
+            //let a=45;//Error:redeclaration in same scaope is not allowed
+         }
+         console.log(a);*/
+        }
+    </script>
+</body>
+</html>

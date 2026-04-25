@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guess the Number Game</title>
+</head>
+
+<body style="font-family: Arial; text-align:center;">
+
+    <h1>🎯 Guess the Number Game</h1>
+    <p id="range"></p>
+    <p id="prize"></p>
+
+    <input type="number" id="guess" placeholder="Enter your guess">
+    <button onclick="checkGuess()">Submit</button>
+
+    <p id="result"></p>
+
+    <script>
+        let min = 1;
+        let max = 10;
+
+        // Generate random number when page loads
+        let randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+        let prize = 100; // starting prize
+
+        document.getElementById("range").innerHTML =
+            "Guess a number between " + min + " and " + max;
+
+        document.getElementById("prize").innerHTML =
+            "💰 Prize: ₹" + prize;
+
+        function checkGuess() {
+            let userGuess = Number(document.getElementById("guess").value);
+
+            if (prize <= 0) {
+                document.getElementById("result").innerHTML =
+                    "❌ Game Over! Prize is ₹0. Correct number was " + randomNumber;
+                return;
+            }
+
+            if (userGuess === randomNumber) {
+                document.getElementById("result").innerHTML =
+                    "🎉 Correct! You won ₹" + prize;
+            } 
+            else if (userGuess < randomNumber) {
+                prize -= 10;
+                document.getElementById("result").innerHTML =
+                    "📉 Try Bigger Number!";
+            } 
+            else {
+                prize -= 10;
+                document.getElementById("result").innerHTML =
+                    "📈 Try Smaller Number!";
+            }
+
+            document.getElementById("prize").innerHTML =
+                "💰 Prize: ₹" + prize;
+        }
+    </script>
+
+</body>
+</html>

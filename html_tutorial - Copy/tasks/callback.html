@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="demo"></div>
+    <script>
+        let output=document.getElementById("demo");
+        function wishMe(name,sample){
+            output.innerHTML+='<br>hello ' +name;
+            sample();
+        }
+        function testCallback(){
+            output.innerHTML+='<br>callback example...';
+        }
+        wishMe("geetha",testCallback);
+    </script>
+    </body>
+</html>

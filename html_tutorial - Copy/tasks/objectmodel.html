@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #myTitle {
+            color: blue;
+        }
+
+        .item {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1 id="myTitle">Welcome to my Task</h1>
+<p>This is a Paragraph</p>
+<p class="item">Item 1</p>
+<p class="item">Item 2</p>
+
+<img id="myImage" src="https://via.placeholder.com/150" alt="placeholder">
+
+<br><br>
+
+<button id="changeBtn">Change Title & Style</button>
+<button id="addBtn">Add New Item</button>
+<button id="removeBtn">Remove Image</button>
+
+<script>
+
+// 🔹 Change title text and style
+document.getElementById("changeBtn").addEventListener("click", function () {
+
+    let title = document.getElementById("myTitle");
+
+    title.textContent = "Updated Title via DOM";
+    title.style.color = "red";
+    title.style.fontSize = "28px";
+});
+
+
+// 🔹 Add new paragraph
+document.getElementById("addBtn").addEventListener("click", function () {
+
+    let newPara = document.createElement("p");
+
+    newPara.textContent = "New dynamically added item";
+    newPara.className = "item";
+
+    document.body.appendChild(newPara);
+});
+
+
+// 🔹 Remove image
+document.getElementById("removeBtn").addEventListener("click", function () {
+
+    let img = document.getElementById("myImage");
+
+    if (img) {
+        img.remove();
+    } else {
+        alert("Image already removed!");
+    }
+});
+
+</script>
+
+</body>
+</html>

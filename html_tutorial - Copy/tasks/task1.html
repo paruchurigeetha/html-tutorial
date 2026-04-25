@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Age Difference Calculator</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; padding: 20px; }
+        .result-box { border: 1px solid #ccc; padding: 15px; border-radius: 8px; max-width: 300px; background: #f9f9f9; }
+        p { margin: 5px 0; }
+        strong { color: #333; }
+    </style>
+</head>
+<body>
+    <h2>Age Statistics</h2>
+    <div id="display" class="result-box">
+        <!-- Results will appear here -->
+    </div>
+    <script>
+        // Your input data
+        const people = [
+            { name: "john", age: 13 },
+            { name: "mark", age: 56 },
+            { name: "rachel", age: 45 },
+            { name: "nate", age: 67 },
+            { name: "jennifer", age: 65 }
+        ];
+        // 1. Extract only the age values into a new array
+        const ages = people.map(person => person.age);
+
+        // 2. Find oldest, youngest using Math.max and Math.min
+        const oldestAge = Math.max(...ages);
+        const youngestAge = Math.min(...ages);
+
+        // 3. Calculate the difference
+        const ageDifference = oldestAge - youngestAge;
+
+        // 4. Display results in the HTML
+        const displayDiv = document.getElementById('display');
+        displayDiv.innerHTML = `
+            <p><strong>Oldest Age:</strong> ${oldestAge}</p>
+            <p><strong>Youngest Age:</strong> ${youngestAge}</p>
+            <hr>
+            <p><strong>Age Difference:</strong> ${ageDifference} years</p>
+        `;
+
+        // Also printing to console as requested
+        console.log("Oldest Age:", oldestAge);
+        console.log("Youngest Age:", youngestAge);
+        console.log("Difference:", ageDifference);
+    </script>
+
+</body>
+</html>

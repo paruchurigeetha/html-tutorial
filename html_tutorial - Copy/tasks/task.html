@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <title>Table Example</title>
+</head>
+
+<body>
+    <button onclick="testFunction()">Show Table</button>
+
+    <div id="op"></div>
+
+    <script>
+        function testFunction() {
+            const myobj = [
+                {"name":"pranathi","age":20,"city":"vzm"},
+                {"name":"geetha","age":19,"city":"guntur"},
+                {"name":"ruchi","age":22,"city":"hyd"}
+            ];
+
+            let text = "<table border='1'>";
+
+            // Header row
+            text += "<tr>";
+            text += "<th>Name</th><th>Age</th><th>City</th>";
+            text += "</tr>";
+
+            // Data rows
+            for (let i = 0; i < myobj.length; i++) {
+                text += "<tr>";
+                text += "<td>" + myobj[i].name + "</td>";
+                text += "<td>" + myobj[i].age + "</td>";
+                text += "<td>" + myobj[i].city + "</td>";
+                text += "</tr>";
+            }
+
+            text += "</table>";
+
+            document.getElementById("op").innerHTML = text;
+        }
+    </script>
+</body>
+</html>

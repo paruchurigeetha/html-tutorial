@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOB Game</title>
+</head>
+
+<body style="font-family: Arial; text-align:center;">
+
+    <h2>DOB Matching Game</h2>
+
+    <input type="date" id="dob">
+    <button onclick="checkDOB()">Check</button>
+
+    <p id="output"></p>
+
+    <script>
+        // Your DOB (change this)
+        let myDOB = "2006-01-21";
+
+        // Praising messages
+        let praise = [
+            "🎉 Wow! Same DOB, you are awesome!",
+            "🥳 We share the same birthday!",
+            "🔥 Legends are born today!",
+            "💫 Same birthday = same vibes!"
+        ];
+
+        // Teasing messages
+        let tease = [
+            "😜 Oops! Not my birthday!",
+            "😂 Haha, wrong date!",
+            "🙃 Try again next year!",
+            "😅 Different DOB, better luck!"
+        ];
+
+        function checkDOB() {
+            let userDOB = document.getElementById("dob").value;
+
+            // Convert to Date objects
+            let user = new Date(userDOB);
+            let me = new Date(myDOB);
+
+            let message = "";
+
+            // Compare only day & month
+            if (
+                user.getDate() === me.getDate() &&
+                user.getMonth() === me.getMonth()
+            ) {
+                let index = Math.floor(Math.random() * praise.length);
+                message = praise[index];
+            } else {
+                let index = Math.floor(Math.random() * tease.length);
+                message = tease[index];
+            }
+
+            document.getElementById("output").innerHTML = message;
+        }
+    </script>
+
+</body>
+</html>

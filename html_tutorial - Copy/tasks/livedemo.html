@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live DOM Playground</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 30px; background-color: #f4f4f4; }
+        .control-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; margin-bottom: 5px; }
+        input { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        
+        /* Specialized styling for color pickers */
+        input[type="color"] { width: 60px; height: 40px; cursor: pointer; padding: 2px; }
+
+        #displayBox {
+            width: 100%;
+            height: 200px;
+            border: 3px solid #333;
+            border-radius: 8px;
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            font-weight: bold;
+            transition: 0.2s; /* Makes the color change smooth */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Live DOM Playground</h2>
+
+    <div class="control-group">
+        <label>Enter Text</label>
+        <input type="text" id="textInput" placeholder="Type here...">
+    </div>
+
+    <div class="control-group">
+        <label>Text Color</label>
+        <!-- This creates the color picker from your image -->
+        <input type="color" id="colorInput" value="#000000">
+    </div>
+
+    <div class="control-group">
+        <label>Background Color</label>
+        <input type="color" id="bgInput" value="#ffffff">
+    </div>
+
+    <div class="control-group">
+        <label>Font Size (px)</label>
+        <input type="number" id="sizeInput" value="24">
+    </div>
+
+    <div id="displayBox">Live Preview</div>
+
+    <script>
+        const textInput = document.getElementById('textInput');
+        const colorInput = document.getElementById('colorInput');
+        const bgInput = document.getElementById('bgInput');
+        const sizeInput = document.getElementById('sizeInput');
+        const displayBox = document.getElementById('displayBox');
+
+        function updateBox() {
+            displayBox.innerText = textInput.value || "Live Preview";
+            displayBox.style.color = colorInput.value;
+            displayBox.style.backgroundColor = bgInput.value;
+            displayBox.style.fontSize = sizeInput.value + "px";
+        }
+
+        // Listen for changes
+        textInput.addEventListener('input', updateBox);
+        colorInput.addEventListener('input', updateBox);
+        bgInput.addEventListener('input', updateBox);
+        sizeInput.addEventListener('input', updateBox);
+    </script>
+
+</body>
+</html>

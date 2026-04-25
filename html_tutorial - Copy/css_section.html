@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Topics</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background:#0b1c2c;
+    color:white;
+    font-family:Poppins;
+    padding:30px;
+}
+
+/* Header */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.back-btn{
+    background:#4db8ff;
+    color:black;
+    padding:6px 12px;
+    border-radius:6px;
+    text-decoration:none;
+}
+
+.main-title{
+    text-align:center;
+}
+
+.sub-text{
+    text-align:center;
+    color:#ccc;
+    margin-bottom:30px;
+}
+
+/* Cards */
+.card-box{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(10px);
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.card-box:hover{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 15px 35px rgba(77,184,255,0.3);
+}
+
+/* Icon */
+.icon{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+/* Button */
+.btn-custom{
+    background:#4db8ff;
+    color:black;
+    margin-top:10px;
+    border-radius:8px;
+    padding:6px 15px;
+}
+
+.btn-custom:hover{
+    background:#1aa3ff;
+    color:white;
+}
+
+/* Footer */
+.footer{
+    text-align:center;
+    margin-top:40px;
+    color:#aaa;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header">
+<a href="index.html" class="back-btn">⬅ Back</a>
+</div>
+
+<h1 class="main-title">🎨 CSS Learning Section</h1>
+<p class="sub-text">
+Explore all CSS concepts with detailed explanations and real practice examples.
+</p>
+
+<div class="container">
+<div class="row g-4">
+
+<!-- CSS Intro -->
+<div class="col-md-3">
+<div class="card-box">
+<div class="icon">📘</div>
+<h5>CSS Introduction</h5>
+<p>Basics, syntax, and how CSS works</p>
+<a href="css_intro.html" class="btn btn-custom">Open</a>
+</div>
+</div>
+
+<!-- Colors -->
+<div class="col-md-3">
+<div class="card-box">
+<div class="icon">🎨</div>
+<h5>CSS Colors</h5>
+<p>Text, background, HEX, RGB & gradients</p>
+<a href="css_colors.html" class="btn btn-custom">Open</a>
+</div>
+</div>
+
+<!-- Text -->
+<div class="col-md-3">
+<div class="card-box">
+<div class="icon">📝</div>
+<h5>CSS Text Styling</h5>
+<p>Alignment, spacing, decoration & fonts</p>
+<a href="css_text.html" class="btn btn-custom">Open</a>
+</div>
+</div>
+
+<!-- Box Model -->
+<div class="col-md-3">
+<div class="card-box">
+<div class="icon">📦</div>
+<h5>Box Model</h5>
+<p>Margin, padding, border & layout spacing</p>
+<a href="css_box.html" class="btn btn-custom">Open</a>
+</div>
+</div>
+
+<!-- Layout -->
+<div class="col-md-3">
+<div class="card-box">
+<div class="icon">📐</div>
+<h5>Flexbox Layout</h5>
+<p>Responsive layouts and alignment</p>
+<a href="css_layout.html" class="btn btn-custom">Open</a>
+</div>
+</div>
+
+<!-- Buttons -->
+<div class="col-md-3">
+<div class="card-box">
+<div class="icon">🔘</div>
+<h5>CSS Buttons</h5>
+<p>Hover effects and UI buttons</p>
+<a href="css_buttons.html" class="btn btn-custom">Open</a>
+</div>
+</div>
+
+<!-- Borders -->
+<div class="col-md-3">
+<div class="card-box">
+<div class="icon">⬛</div>
+<h5>CSS Borders</h5>
+<p>Different border styles and radius</p>
+<a href="css_borders.html" class="btn btn-custom">Open</a>
+</div>
+</div>
+
+<!-- Shadows -->
+<div class="col-md-3">
+<div class="card-box">
+<div class="icon">🌫️</div>
+<h5>CSS Shadows</h5>
+<p>Box-shadow and text-shadow effects</p>
+<a href="css_shadows.html" class="btn btn-custom">Open</a>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+<p>© 2026 Smart Learning Website | Designed by Geetha 🚀</p>
+</div>
+
+</body>
+</html>

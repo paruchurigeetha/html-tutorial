@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Selectors</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background:#0b1c2c;
+    color:white;
+    font-family:Poppins;
+    padding:40px;
+}
+.section{margin-top:25px;}
+.box{
+    background:#13293d;
+    padding:20px;
+    border-radius:10px;
+}
+.highlight{color:#4db8ff;}
+.btn-custom{
+    background:#4db8ff;
+    color:black;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>CSS <span class="highlight">Selectors</span></h1>
+
+<div class="section">
+<h3>📖 What are Selectors?</h3>
+<p>
+CSS selectors are used to select and target HTML elements so that styles can be applied to them.
+Selectors define "which element" you want to style.
+</p>
+</div>
+
+<div class="section">
+<h3>📌 Types of Selectors</h3>
+<ul>
+<li><b>Element Selector</b> → selects all elements (p, h1)</li>
+<li><b>Class Selector</b> → selects elements with class (.box)</li>
+<li><b>ID Selector</b> → selects unique element (#id)</li>
+<li><b>Group Selector</b> → selects multiple elements</li>
+<li><b>Universal Selector</b> → selects all elements (*)</li>
+</ul>
+</div>
+
+<div class="section">
+<h3>📌 Syntax</h3>
+<div class="box">
+<pre>
+p {
+   color: red;
+}
+
+.box {
+   background: blue;
+}
+
+#id {
+   font-size: 20px;
+}
+</pre>
+</div>
+</div>
+
+<div class="section">
+<h3>📌 Why Selectors are Important?</h3>
+<ul>
+<li>Helps apply styles efficiently</li>
+<li>Improves code readability</li>
+<li>Allows reuse of styles</li>
+</ul>
+</div>
+
+<a href="css_selectors_practice.html" class="btn btn-custom">
+👉 View My Practice
+</a>
+
+</body>
+</html>

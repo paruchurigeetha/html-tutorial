@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+<h2> java script alert practice</h2>
+    </head>
+    <body>
+<div>
+        <form action="">
+            <input type="text" id="ip">
+<input type="button" value="start now" onclick="test()">
+        </form>
+</div>
+<div id="op">   </div>
+<script>
+    function test(){
+    document.getElementById("op").innerHTML=" ";
+        var n=document.getElementById('ip').value;
+        var bstart="<b style='color:red'>";
+            var bend="</b>";
+    document.getElementById("op").innerHTML=bstart+ n +bend;
+    }
+</script>
+</body>
+</html>
